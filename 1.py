@@ -8,6 +8,7 @@ class Flipper(QWidget):
         self.initUI()
 
     def initUI(self):
+        self.setWindowTitle("Flipper")
         self.setFixedSize(500, 200)
         self.field1 = QLineEdit(self)
         self.field1.setGeometry(50, 75, 100, 50)

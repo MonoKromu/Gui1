@@ -46,7 +46,8 @@ class Menu(QWidget):
     def changeFood(self):
         button = self.sender()
         if button.text() == "-":
-            button.food.quantity -= 1
+            if button.food.quantity > 0:
+                button.food.quantity -= 1
         else:
             button.food.quantity += 1
         self.updateCheck()
